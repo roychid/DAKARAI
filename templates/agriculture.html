@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Agriculture & Entrepreneurship — Dakarai Albert Mapuranga{% endblock %}
+{% block description %}Agriculture and entrepreneurial ventures alongside Dakarai Albert Mapuranga's construction leadership.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Agriculture &amp; Entrepreneurship</p>
+    <h1>Building beyond infrastructure.</h1>
+    <p class="lede">
+      Alongside construction, Mapuranga holds a stake in Platinum Group
+      Agriculture — part of a broader entrepreneurial footprint connecting
+      construction, agriculture and regional economic development.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="split-media">
+      <div class="media-frame">
+        <img src="{{ url_for('static', filename='images/agriculture/barley-field.jpg') }}" alt="Surveying a barley field on the farm" />
+      </div>
+    </div>
+    <div class="split-text prose">
+      <p>
+        Time on the ground is part of how the operation runs — from irrigated
+        wheat and barley to tobacco under cultivation, with livestock rounding
+        out the farm's operations.
+      </p>
+      <p class="note">
+        Farm ownership, acreage, crops, livestock, revenue and specific
+        project claims are withheld pending client confirmation (brief
+        section 2, Agriculture &amp; Entrepreneurship).
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">On the land</h2>
+    <div class="mini-gallery">
+      <img src="{{ url_for('static', filename='images/agriculture/tobacco-field.jpg') }}" alt="Tobacco under cultivation" />
+      <img src="{{ url_for('static', filename='images/agriculture/irrigation-pivot.jpg') }}" alt="Irrigation pivot over a wheat field" />
+      <img src="{{ url_for('static', filename='images/agriculture/wheat-field.jpg') }}" alt="Standing in a wheat field at harvest" />
+      <img src="{{ url_for('static', filename='images/agriculture/field-road.jpg') }}" alt="Access road through tobacco fields" />
+      <img src="{{ url_for('static', filename='images/agriculture/field-landcruiser.jpg') }}" alt="Field vehicle at the edge of a harvested field" />
+      <img src="{{ url_for('static', filename='images/agriculture/livestock.jpg') }}" alt="Livestock on the farm" />
+    </div>
+  </div>
+</section>
+
+{% endblock %}

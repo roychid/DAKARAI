@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "slug": "example-project",
+      "title": "Project Title — Pending",
+      "location": "Location — Pending",
+      "category": "Commercial",
+      "year": "2025",
+      "description": "One-line summary shown under the card on the work grid.",
+      "body": "Longer description shown at the top of the project detail page. Two or three sentences. This is where context, scope and significance live — kept factual and client-approved.",
+      "media": []
+    }
+  ]
+}

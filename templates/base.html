@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Dakarai Albert Mapuranga{% endblock %}</title>
+  <meta name="description" content="{% block description %}Business Executive • Entrepreneur • Construction & Infrastructure • Agriculture{% endblock %}" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% block og_title %}Dakarai Albert Mapuranga{% endblock %}" />
+  <meta property="og:description" content="Business Executive • Entrepreneur • Construction & Infrastructure • Agriculture" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg') }}" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand">Dakarai<span>.</span></a>
+      <nav class="nav" id="nav">
+        <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+        <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About</a>
+        <a href="/leadership" class="{{ 'active' if request.path == '/leadership' else '' }}">Leadership</a>
+        <a href="/bhc" class="{{ 'active' if request.path == '/bhc' else '' }}">BHC</a>
+        <a href="/agriculture" class="{{ 'active' if request.path == '/agriculture' else '' }}">Agriculture</a>
+        <a href="/work" class="{{ 'active' if request.path == '/work' else '' }}">Work</a>
+        <a href="/media" class="{{ 'active' if request.path == '/media' else '' }}">Media</a>
+        <a href="/contact" class="nav-cta {{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; {{ 2026 }} Dakarai Albert Mapuranga. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/contact">Contact</a>
+        <a href="/media">Media</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

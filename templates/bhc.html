@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block title %}Big House Construction — Dakarai Albert Mapuranga{% endblock %}
+{% block description %}Big House Construction: regional construction and development across Zimbabwe, Botswana, Namibia and Mozambique.{% endblock %}
+
+{% block content %}
+
+{# ============================================================
+   PENDING ASSETS (do not render, internal note):
+   - BHC project photography (Neo to supply)
+   - Confirmed list of major BHC projects to feature
+   - Optional: on-site photograph of Dakarai at a BHC project
+   ============================================================ #}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Big House Construction</p>
+    <h1>Regional infrastructure, built to last.</h1>
+    <p class="lede">
+      A Southern African construction and development group delivering
+      residential, commercial, infrastructure and special projects across
+      the region.
+    </p>
+    <div class="tag-row">
+      <span class="tag">Zimbabwe</span>
+      <span class="tag">Botswana</span>
+      <span class="tag">Namibia</span>
+      <span class="tag">Mozambique</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT BHC ===== -->
+<section class="section">
+  <div class="container split split-reverse">
+    <div class="split-media">
+      <img class="bhc-logo"
+           src="{{ url_for('static', filename='images/bhc/bhc-logo.jpeg') }}"
+           alt="Big House Construction logo" />
+    </div>
+    <div class="split-text prose">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">Big House Construction</h2>
+      <p>
+        Big House Construction (BHC) is a Southern African construction and
+        development group focused on delivering high-quality residential,
+        commercial, infrastructure and special projects that contribute to
+        the growth of communities and economies across the region.
+      </p>
+      <p>
+        BHC brings together experienced professionals, specialist businesses
+        and strategic partners to address complex development challenges —
+        from building multiple-unit residential communities and commercial
+        spaces to delivering roads, bridges, water and sanitation
+        infrastructure and other major development initiatives.
+      </p>
+      <p>
+        With a growing regional presence across Zimbabwe, Botswana, Namibia
+        and Mozambique, BHC combines local knowledge with technical expertise
+        and a commitment to disciplined project execution. The group works
+        with both public and private investors, building lasting partnerships
+        and translating ambitious plans from blueprints to finishings without
+        excuses.
+      </p>
+      <p>
+        At the heart of BHC is a commitment to quality excellence,
+        sustainability and responsibility, collaboration, innovation and
+        growth, and meaningful community impact. The organisation continues
+        to explore new ways of delivering efficient, durable and responsible
+        developments while creating opportunities for the communities and
+        economies it serves.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CEO ROLE ===== -->
+<section class="section">
+  <div class="container split">
+    <div class="split-media">
+      <div class="media-frame">
+        <img src="{{ url_for('static', filename='images/portraits/ceo-placeholder.jpg') }}"
+             alt="Dakarai Albert Mapuranga, Chief Executive Officer of Big House Construction" />
+      </div>
+    </div>
+    <div class="split-text prose">
+      <p class="eyebrow">Leadership</p>
+      <h2 class="section-title">Chief Executive Officer</h2>
+      <p>
+        Dakarai Albert Mapuranga leads Big House Construction as Chief
+        Executive Officer, with a mandate to drive strategic growth and
+        regional expansion across the company's active markets.
+      </p>
+      <p>
+        His leadership spans the delivery of residential, commercial and
+        civil engineering projects, alongside the cultivation of strategic
+        partnerships across Southern Africa.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOCUS AREAS ===== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Focus areas</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Residential</h3>
+        <p>Multiple-unit residential communities and housing developments across BHC's regional markets.</p>
+      </div>
+      <div class="card">
+        <h3>Commercial</h3>
+        <p>Commercial spaces supporting business and urban growth.</p>
+      </div>
+      <div class="card">
+        <h3>Civil &amp; Infrastructure</h3>
+        <p>Roads, bridges, water and sanitation infrastructure, and other major development initiatives.</p>
+      </div>
+      <div class="card">
+        <h3>Special Projects</h3>
+        <p>Purpose-built developments delivered for specific public and private-sector needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SELECTED PROJECTS ===== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Selected projects</h2>
+    <p class="section-sub">
+      A selection of Big House Construction developments across the region.
+    </p>
+
+    <p class="work-empty">
+      Project showcase coming soon — a full selection will appear here once
+      approved project imagery is supplied.
+    </p>
+
+    <p style="margin-top: 32px;">
+      <a href="{{ url_for('work') }}" class="btn btn-secondary">View selected work &rarr;</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== VISIT BHC ===== -->
+<section class="section">
+  <div class="container" style="text-align: center;">
+    <div class="prose prose-narrow" style="margin: 0 auto;">
+      <h2 class="section-title">Visit Big House Construction</h2>
+      <p>
+        For the full BHC portfolio, capabilities and company information,
+        visit the official website.
+      </p>
+      <p style="margin-top: 32px;">
+        <a href="https://www.bighouseconstruction.co.zw/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary">bighouseconstruction.co.zw &nearr;</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Dakarai Albert Mapuranga — Business Executive{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Business Executive • Entrepreneur</p>
+      <h1>Building businesses, infrastructure and long-term value across Southern Africa.</h1>
+      <p class="lede">
+        Dakarai Albert Mapuranga is a Southern African business executive and entrepreneur,
+        leading construction, infrastructure and agricultural ventures across the region.
+      </p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn btn-primary">Contact / Connect</a>
+        <a href="/about" class="btn btn-secondary">Explore Journey</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='images/portraits/hero.jpg') }}" alt="Dakarai Albert Mapuranga" />
+    </div>
+  </div>
+</section>
+
+<section class="teaser-strip">
+  <div class="container">
+    <div class="teaser-grid">
+      <a href="/bhc" class="teaser-card">
+        <p class="eyebrow">Big House Construction</p>
+        <h3>Regional infrastructure</h3>
+        <p>Residential, commercial and civil engineering across four countries.</p>
+        <span class="link">Learn more →</span>
+      </a>
+      <a href="/agriculture" class="teaser-card">
+        <p class="eyebrow">Agriculture</p>
+        <h3>Beyond infrastructure</h3>
+        <p>A stake in Platinum Group Agriculture — fields, farms and livestock.</p>
+        <span class="link">Learn more →</span>
+      </a>
+      <a href="/leadership" class="teaser-card">
+        <p class="eyebrow">Leadership</p>
+        <h3>The path to CEO</h3>
+        <p>From corporate leadership at The Broadhaven Group to BHC.</p>
+        <span class="link">Learn more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
