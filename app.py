@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, Response, request
 
 app = Flask(__name__)
@@ -12,12 +13,14 @@ CARD = {
     "contacts": [
         {
             "region": "Zimbabwe",
+            "flag_code": "zw",
             "email": "dakaraim@gmail.com",
             "phone": "+263775113763",
             "phone_display": "+263 77 511 3763",
         },
         {
             "region": "Mozambique",
+            "flag_code": "mz",
             "email": "dakaraim@bhccmmoz.mz",
             "phone": "+258840693312",
             "phone_display": "+258 84 069 3312",
@@ -68,7 +71,14 @@ def contact():
 
 @app.route("/card")
 def card():
-    return render_template("card.html", card=CARD, card_url=request.url)
+    # PUBLIC_BASE_URL lets you test the QR code on your phone before
+    # deploying, e.g. set it to your machine's LAN IP or an ngrok URL:
+    #   set PUBLIC_BASE_URL=http://192.168.1.20:5000   (Windows)
+    #   export PUBLIC_BASE_URL=http://192.168.1.20:5000  (Mac/Linux)
+    # Leave it unset in production, request.url will already be correct.
+    base = os.environ.get("PUBLIC_BASE_URL")
+    card_url = f"{base.rstrip('/')}/card" if base else request.url
+    return render_template("card.html", card=CARD, card_url=card_url)
 
 @app.route("/dakarai-mapuranga.vcf")
 def card_vcf():
